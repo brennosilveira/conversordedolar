@@ -1,0 +1,72 @@
+/* Definindo o fundo da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #e0e0e0;
+  }
+  
+  /* Container com um visual futurista */
+  .container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+    width: 300px;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+    color: #00e6e6;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px #00e6e6;
+  }
+  
+  /* Input estilizado com borda neon */
+  input {
+    width: 90%;
+    padding: 12px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #00e6e6;
+    text-align: center;
+    box-shadow: 0 0 8px rgba(0, 230, 230, 0.5);
+  }
+  
+  /* Botão futurista com efeito neon */
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: #00e6e6;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-shadow: 0 0 5px #000;
+    box-shadow: 0 0 15px rgba(0, 230, 230, 0.6), 0 0 25px rgba(0, 230, 230, 0.4);
+  }
+  
+  button:hover {
+    background: #00b3b3;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6);
+  }
+  
+  /* Resultado com efeito neon */
+  #result {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #00e6e6;
+    text-shadow: 0 0 8px #00e6e6;
+  }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Moeda</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="container">
+    <h1>Conversor de Dólar para Real</h1>
+    <input type="number" id="dollarAmount" placeholder="Valor em dólares" />
+    <button onclick="convertCurrency()">Converter</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    async function convertCurrency() {
+  const dollarAmount = document.getElementById("dollarAmount").value;
+  const resultDiv = document.getElementById("result");
+
+  if (!dollarAmount) {
+    resultDiv.innerText = "Por favor, insira um valor.";
+    return;
+  }
+
+  try {
+    const response = await fetch(`https://v6.exchangerate-api.com/v6/e9ad09fffaa4e2a163e13737/latest/USD`);
+    const data = await response.json();
+
+    if (data.conversion_rates) {
+      const rate = data.conversion_rates.BRL;
+      const realAmount = (dollarAmount * rate).toFixed(2);
+      resultDiv.innerText = `R$ ${realAmount}`;
+    } else {
+      resultDiv.innerText = "Erro ao obter a taxa de câmbio.";
+    }
+  } catch (error) {
+    resultDiv.innerText = "Erro de conexão. Tente novamente.";
+  }
+}
+
+  </script>
+
+</body>
+</html>
